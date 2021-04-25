@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/mainLayout"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/darkWhite"
+
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/clock"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/clockString"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+
+        android:visibility="invisible"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timer"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/timerString"
+        android:textColor="@color/black"
+        android:textSize="160sp"
+
+        android:visibility="invisible"
+
+        app:layout_constraintBottom_toTopOf="@id/startGiveUpButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startGiveUpButton"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/startString"
+        android:textSize="30sp"
+
+        android:background="@color/cyan"
+
+        android:visibility="invisible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer" />
+
+    <Button
+        android:id="@+id/resetTime"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@color/pink"
+        android:text="@string/resetTimesString"
+        android:textSize="12sp"
+
+        android:visibility="invisible"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10sp"/>
+
+    <TextView
+        android:id="@+id/hours"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/hoursString"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/twoHoursSwitch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/oneHourSwitch"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/oneHourString"
+
+        app:layout_constraintBottom_toBottomOf="@id/twoHoursSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/twoHoursSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/twoHoursSwitch" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/twoHoursSwitch"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/twoHoursString"
+
+        app:layout_constraintBottom_toTopOf="@id/minutes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hours" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/threeHoursSwitch"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/threeHoursString"
+
+        app:layout_constraintBottom_toBottomOf="@id/twoHoursSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/twoHoursSwitch"
+        app:layout_constraintTop_toTopOf="@id/twoHoursSwitch" />
+
+    <TextView
+        android:id="@+id/minutes"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/minutesString"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/twoHoursSwitch"
+        app:layout_constraintBottom_toTopOf="@id/thirtyMinutesSwitch"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/fifteenMinutesSwitch"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/fifteenMinutesString"
+
+        app:layout_constraintBottom_toBottomOf="@id/thirtyMinutesSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/thirtyMinutesSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/thirtyMinutesSwitch" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/thirtyMinutesSwitch"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/thirtyMinutesString"
+
+        app:layout_constraintBottom_toTopOf="@id/beginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fifteenMinutesSwitch"
+        app:layout_constraintTop_toBottomOf="@id/minutes" />
+
+    <Button
+        android:id="@+id/beginButton"
+
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+
+        android:background="@color/cyan"
+        android:text="@string/beginString"
+
+        android:textSize="30sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thirtyMinutesSwitch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

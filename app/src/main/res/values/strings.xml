@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Work Countdown</string>
+
+    <string name="clockString">10:10:10</string>
+    <string name="timerString">0:00:00</string>
+
+    <string name="beginString">Begin</string>
+    <string name="startString">Start</string>
+    <string name="giveUpString">Give Up</string>
+    <string name="resetTimesString">Reset <br/> Times</string>
+
+    <string name="hoursString">Hours</string>
+    <string name="minutesString">Minutes</string>
+
+    <string name="oneHourString">One Hour</string>
+    <string name="twoHoursString">Two Hours</string>
+    <string name="threeHoursString">Three Hours</string>
+
+    <string name="fifteenMinutesString">Fifteen Minutes</string>
+    <string name="thirtyMinutesString">Thirty Minutes</string>
+</resources>
